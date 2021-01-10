@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8">
+  <title>シャツをオブジェクトで定義する</title>
+ </head>
+ <body>
+
+  <script>
+  function shirtClass(meisyo, iro, ookisa) {
+   this.name = meisyo;
+   this.color = iro;
+   this.size = ookisa;
+  }
+
+  shirt0 = new shirtClass("シャツ１", "blue", "S");
+  shirt1 = new shirtClass("シャツ２", "red", "L");
+  shirt2 = new shirtClass("シャツ３", "white", "M");
+  </script>
+ </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8">
+  <title>テーブルで色見本を作る</title>
+  <style>
+  table { border-collapse: collapse; }
+  td {
+   width: 100px;
+   height: 200px;
+   border: solid 1px;
+  }
+  </style>
+ </head>
+ <body>
+  <table id="testTBL"></table>
+
+  <script>
+  //テーブルを作る
+  var tstTbl = document.getElementById("testTBL");
+  var row = tstTbl.insertRow(-1);
+
+  var cell;
+
+  //赤いセルを挿入
+  cell = row.insertCell(-1);
+  cell.style.backgroundColor = "rgb( 255, 0, 0 )";
+
+  //緑のセルを挿入
+  cell = row.insertCell(-1);
+  cell.style.backgroundColor = "rgb( 0, 255, 0 )";
+
+  //青いセルを挿入
+  cell = row.insertCell(-1);
+  cell.style.backgroundColor = "rgb( 0, 0, 255 )";
+  </script>
+ </body>
+</html>

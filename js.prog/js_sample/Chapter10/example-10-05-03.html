@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8">
+  <title>山本家の家族をオブジェクトで定義する</title>
+ </head>
+ <body>
+ <span>コンソールのログを確認して下さい</span>
+
+  <script>
+  //クラスの定義
+  function Member(namae, nenrei, seibetsu) {
+   this.name = namae;
+   this.age = nenrei;
+   this.gender = seibetsu;
+  }
+
+  //メソッドの定義
+  Member.prototype.toshitoru = function() {
+   this.age++;
+  }
+
+  Member.prototype.wakagaeru = function() {
+   this.age--;
+  }
+
+  var GENDER = ["男性", "女性"];
+
+  var papa = new Member("山本 大介", 42, 0);
+  var mama = new Member("山本 美咲", 37, 1);
+  var boku = new Member("山本 拓也",  6, 0);
+
+  console.log("お母さんは今" + mama.age + "歳ですが");
+  console.log("５歳若返りたいので");
+  mama.wakagaeru();
+  mama.wakagaeru();
+  mama.wakagaeru();
+  mama.wakagaeru();
+  mama.wakagaeru();
+  console.log("mama.wakagaeru()を５回行い");
+  console.log(mama.age +"歳になりました");
+  </script>
+ </body>
+</html>
